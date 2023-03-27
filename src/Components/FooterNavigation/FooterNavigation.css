@@ -1,0 +1,35 @@
+.footerNav{
+    height: 400px;
+    width:100%;
+    color: white;
+    background-color: #000000;
+  }
+
+  .yellowButton{
+    /* align-items: center !important; */
+    margin-left: 47%;
+    /* margin-right: 50%; */
+    margin-top: 10px;
+  }
+  
+  .yellowButton:hover {
+    background-color: rgb(142, 138, 97) !important;
+  }
+
+  .logoIcons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .WhiteLink{
+    color: white;
+    text-decoration: none;
+    
+  }
+  
+  .WhiteLink:hover{
+    text-decoration:underline;
+    color:white;
+  }
