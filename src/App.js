@@ -6,8 +6,9 @@ import FooterNavigation from './Components/FooterNavigation/FooterNavigation';
 
 function App() {
   return (
-    <div>
+    <div >
   <HeaderNavigation/>
+  <br/><br/>
 <FooterNavigation/>
     </div>
    );

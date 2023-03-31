@@ -2,6 +2,12 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import {Dropdown} from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faImdb} from "@fortawesome/free-brands-svg-icons";
+import {faBars,faHeart} from "@fortawesome/free-solid-svg-icons";
+// import {faRectangleHistoryCirclePlus} from "react-fontawesome";
+
+
 import './HeaderNavigation.css'
 
 function HeaderNavigation() {
@@ -9,8 +15,8 @@ function HeaderNavigation() {
          <div>
       <Navbar bg="dark" variant="dark">
               <Container>
-                <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-                <button type="button" class="btn btn-dark p-2">Menu</button>
+                <Navbar.Brand href="#home"><FontAwesomeIcon icon={faImdb} size="2xl" style={{color: "#e6e03d",}} /></Navbar.Brand>
+                <button type="button" class="btn btn-dark p-2"><FontAwesomeIcon icon={faBars}/>Menu</button>
       <div class="input-group">
             <span class="input-group-text" id="basic-addon1">
             <Dropdown>
@@ -25,13 +31,14 @@ function HeaderNavigation() {
           </Dropdown>
             </span>
             <input type="text" class="form-control" placeholder="IMDB Search" aria-label="Username" aria-describedby="basic-addon1"/>
+            <button type="button" class="btn"><FontAwesomeIcon icon={faImdb} size="2xl" style={{color: "#ffffff",}} /></button>
           </div>
                 <Nav className="ml-auto">
                 <button type="button" class="btn btn-dark p-2">Watchlist</button>
                 <button type="button" class="btn btn-dark p-2">SignIn</button>
                <div>
                <Dropdown>
-            <Dropdown.Toggle variant="dark" id="dropdown-basic ">
+            <Dropdown.Toggle variant="dark" id="dropdown-basic">
               EN
             </Dropdown.Toggle>
             <Dropdown.Menu>
