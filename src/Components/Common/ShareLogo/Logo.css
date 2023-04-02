@@ -1,0 +1,16 @@
+.logo-container {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none solid black;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+  }
+  
+  .logo-container:hover {
+    background-color: bisque;
+  }
+  

@@ -16,7 +16,7 @@ function HeaderNavigation() {
       <Navbar bg="dark" variant="dark">
               <Container>
                 <Navbar.Brand href="#home"><FontAwesomeIcon icon={faImdb} size="2xl" style={{color: "#e6e03d",}} /></Navbar.Brand>
-                <button type="button" class="btn btn-dark p-2"><FontAwesomeIcon icon={faBars}/>Menu</button>
+                <button type="button" class="btn btn-dark p-2 d-flex"><FontAwesomeIcon className='faBars' icon={faBars}/>&nbsp;Menu</button>
       <div class="input-group">
             <span class="input-group-text" id="basic-addon1">
             <Dropdown>
