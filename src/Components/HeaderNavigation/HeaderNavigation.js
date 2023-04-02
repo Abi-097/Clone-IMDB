@@ -4,7 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import {Dropdown} from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faImdb} from "@fortawesome/free-brands-svg-icons";
-import {faBars,faHeart} from "@fortawesome/free-solid-svg-icons";
+import {faBars,faBookmark} from "@fortawesome/free-solid-svg-icons";
 // import {faRectangleHistoryCirclePlus} from "react-fontawesome";
 
 
@@ -34,7 +34,7 @@ function HeaderNavigation() {
             <button type="button" class="btn"><FontAwesomeIcon icon={faImdb} size="2xl" style={{color: "#ffffff",}} /></button>
           </div>
                 <Nav className="ml-auto">
-                <button type="button" class="btn btn-dark p-2">Watchlist</button>
+                <button type="button" class="btn btn-dark p-2 d-flex"><FontAwesomeIcon className='faBars' icon={faBookmark}/>&nbsp;Watchlist</button>
                 <button type="button" class="btn btn-dark p-2">SignIn</button>
                <div>
                <Dropdown>

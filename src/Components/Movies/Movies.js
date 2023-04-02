@@ -1,6 +1,5 @@
 import React from "react";
 import "./Movies.css"
-import Card from 'react-bootstrap/Card';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
 import {faStar,faBookmark} from "@fortawesome/free-solid-svg-icons";
 import StarRate from "../Common/RatingStar/StarRate";
@@ -43,7 +42,7 @@ export default function Movies(){
           <div className="columnD"> <StarRate/></div>
           <div className="columnE"><FontAwesomeIcon icon={faBookmark} /></div>
         </div>
-        </div>
+        </div> 
         <div className="card">
           <div className="flexTable">
           {/* <img src={data.thumbnail}/> */}
