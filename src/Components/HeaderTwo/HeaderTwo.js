@@ -55,11 +55,11 @@ export default function HeaderTwo(){
 
     <div class="containerYoutube">
   <div class="left-boxYoutube">
-  <img src="https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_QL75_UX380_CR0,1,380,562_.jpg" alt="Girl in a jacket" width="350px" height="450px"/>
+  <img src="https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_QL75_UX380_CR0,1,380,562_.jpg" alt="Girl in a jacket" width="290px" height="450px"/>
   </div>
   <div class="leftB-boxYoutube">
   <ReactPlayer
-   width='710px'
+   width='750px'
     height='450px'
   url={"https://www.youtube.com/watch?v=5llXA0RTYIU"}
   config={{
