@@ -17,7 +17,7 @@ function App() {
   <br/><br/>
   {/* <Table/> */}
   <br/><br/>
-{/* <FooterNavigation/> */}
+<FooterNavigation/>
 
 {/* <div>Need to route the page  */}
 {/* <Routes>

@@ -82,7 +82,23 @@ export default function HeaderTwo(){
     </div>
   </div>
 </div>
+  <div className="btn btn-dark rounded-pill ButtonHeader2 ButtonHeader3"><b>Drama</b></div>
 
+  <div class="d-flex bd-highlight coreContain">
+  <div class="p-2 flex-grow-1 bd-highlight fw-normal">
+  Over the course of several years, two convicts form a friendship, seeking consolation and, eventually, <br/>redemption through basic compassion.
+  <hr/>
+  Director Frank Darabont
+  <hr/>
+  Writers Stephen KingFrank . Darabont
+  <hr/>
+  Stars Tim Robbins . Morgan Freeman . Bob Gunton
+  <hr/>
+  
+
+  </div>
+  <div class="p-2 bd-highlight coreContain1">Third flex item</div>
+</div>
         </div>
 
     )

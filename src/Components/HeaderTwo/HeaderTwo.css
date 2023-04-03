@@ -1,7 +1,7 @@
 .Main{
     background-color: rgb(35, 34, 34);
     width: 100%;
-    height: 600px;
+    height: 1000px;
     color:white;
 }
 
@@ -115,3 +115,16 @@
     background-color: rgb(2, 2, 2);
   }
   
+  .ButtonHeader3{
+    margin-left: 7%;
+}
+
+.coreContain{
+    margin-left: 7%;
+    margin-right: 13%;
+    border:1px solid;
+}
+
+.coreContain1{
+    border:1px solid;}
+/*  //temporary */
