@@ -1,8 +1,12 @@
 import React from "react";
 import './HeaderTwo.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faSearch,faShareNodes,faStar,faChartLine } from "@fortawesome/free-solid-svg-icons";
+import {faSearch,faShareNodes,faStar,faChartLine,faVideo, faImages } from "@fortawesome/free-solid-svg-icons";
+import ReactPlayer from 'react-player';
 import Logo from "../Common/ShareLogo/Logo";
+
+
+
 
 export default function HeaderTwo(){
     return(
@@ -48,7 +52,37 @@ export default function HeaderTwo(){
         </div>
       </div>
     </div>
+
+    <div class="containerYoutube">
+  <div class="left-boxYoutube">
+  <img src="https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_QL75_UX380_CR0,1,380,562_.jpg" alt="Girl in a jacket" width="350px" height="450px"/>
+  </div>
+  <div class="leftB-boxYoutube">
+  <ReactPlayer
+   width='710px'
+    height='450px'
+  url={"https://www.youtube.com/watch?v=5llXA0RTYIU"}
+  config={{
+    youtube: {
+      playerVars: { showinfo: 1}
+    },
+    facebook: {
+        appId: '12345'
+    }
+  }}
+/>
+  </div>
+  <div class="right-boxYoutube"> 
+    <div class="top-boxYoutube">
+    <button type="button" class="btn btn-dark w-100 h-100"><FontAwesomeIcon icon={faVideo} size="xl" style={{color: "#ffffff",}}/><div><b>5 Videos</b></div></button>
+    </div>
     
+    <div class="bottom-boxYoutube">
+        <button type="button" class="btn btn-dark w-100 h-100"><FontAwesomeIcon icon={faImages} size="xl" style={{color: "#ffffff",}} /><div><b>99+ Photos</b></div></button>
+    </div>
+  </div>
+</div>
+
         </div>
 
     )

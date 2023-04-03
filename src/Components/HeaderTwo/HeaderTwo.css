@@ -10,9 +10,6 @@
     font-weight: bold;
 }
 
-
-
-
 .ButtonHeader2{
     background-color: transparent !important;
 }
@@ -30,15 +27,17 @@
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: repeat(2, 1fr);
-    width: auto;
+    width: 100%;
     /* margin-left: 10%; */
+    /* border:1px solid; */
+    height: 100px;
   }
   
   .leftName {
     /* grid-row: 1; */
     grid-column: 1 / 2;
     /* background-color: rgb(8, 181, 239); */
-    height: 100px;
+    /* height: 50px; */
     /* border: 1px solid; */
     width:1050px;
     margin-left: 10%;
@@ -79,3 +78,40 @@
     font-size: small !important;
     color: gray;
   }
+
+  /* Youtube grid */
+
+  .containerYoutube {
+    display: flex;
+    margin-left: 7%;
+    width: 80%;
+    height: 450px;
+    /* background-color: #ccc; */
+  }
+  
+  .left-boxYoutube {
+    /* flex: 1; */
+    background-color: rgb(185, 130, 130);
+    
+  }
+
+.leftB-boxYoutube{
+    flex: 3;
+    background-color: rgb(195, 50, 50);
+}
+  .right-boxYoutube {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .top-boxYoutube {
+    flex: 2;
+    background-color: rgb(0, 0, 0);
+  }
+  
+  .bottom-boxYoutube {
+    flex: 2;
+    background-color: rgb(2, 2, 2);
+  }
+  
