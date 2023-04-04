@@ -14,7 +14,7 @@ export default function FooterNavigation (){
         <>
 <div className='footerNav'>
    
-   <Button className='yellowButton' variant="warning">Warning</Button> 
+   <Button className='yellowButton fw-bold' variant="warning">Sign in for more access</Button> 
    <br></br> 
    <div className='logoIcons'>
    <CompButton name=<FontAwesomeIcon icon={faFacebookF} style={{color: "#ffffff",}} />/>

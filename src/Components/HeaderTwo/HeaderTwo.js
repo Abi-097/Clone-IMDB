@@ -1,10 +1,10 @@
 import React from "react";
 import './HeaderTwo.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faSearch,faShareNodes,faStar,faChartLine,faVideo, faImages } from "@fortawesome/free-solid-svg-icons";
+import {faSearch,faShareNodes,faStar,faChartLine,faVideo, faImages,fa8,faPlus } from "@fortawesome/free-solid-svg-icons";
 import ReactPlayer from 'react-player';
 import Logo from "../Common/ShareLogo/Logo";
-
+import Dropdown from 'react-bootstrap/Dropdown';
 
 
 
@@ -27,7 +27,7 @@ export default function HeaderTwo(){
 <div className="containerName">
       <div className="leftName">
        <h1>The Shawshank Redemption</h1>
-       <p>1994 . R . 2h 22m</p>
+       <p>1994 . <a href="www.facebook.com" className="WhiteLink" >R</a> . <a href="www.facebook.com" className="WhiteLink" >2h 22m</a></p>
        <div>
     </div>
       </div>
@@ -88,16 +88,30 @@ export default function HeaderTwo(){
   <div class="p-2 flex-grow-1 bd-highlight fw-normal">
   Over the course of several years, two convicts form a friendship, seeking consolation and, eventually, <br/>redemption through basic compassion.
   <hr/>
-  Director Frank Darabont
+  Director <a href="www.facebook.com" className="BlueLink"> Frank Darabont </a>
   <hr/>
-  Writers Stephen KingFrank . Darabont
+  Writers <a href="www.facebook.com" className="BlueLink"> Stephen KingFrank </a> .  <a href="www.facebook.com" className="BlueLink"> Darabont </a>
   <hr/>
-  Stars Tim Robbins . Morgan Freeman . Bob Gunton
+  Stars <a href="www.facebook.com" className="BlueLink">Tim Robbins</a> . <a href="www.facebook.com" className="BlueLink">Morgan Freeman</a> .  <a href="www.facebook.com" className="BlueLink">Bob Gunton</a> 
+   
   <hr/>
-  
+  </div>
+
+  <div class="p-2 bd-highlight coreContain1">
+  <Dropdown>
+      <Dropdown.Toggle className="btn btn-secondary dropdown-toggle ButtonHeader2 ButtonHeader4" id="dropdown-basic">
+      <FontAwesomeIcon icon={faPlus} size="2xl" style={{color: "#ffffff",}} /><b> &nbsp;Add to watch list</b> <br/>&nbsp;Added by 1.43M users
+        </Dropdown.Toggle>
+        </Dropdown>
+        <div className="d-flex mt-3 mb-2">
+        <a href="www.facebook.com" className=" BlueLink"><b>10.7K</b>&nbsp;User reviews</a>&nbsp;&nbsp;<a href="www.facebook.com" className=" d-flex BlueLink"> <b>169</b>&nbsp;Critic reviews</a> 
+        </div>
+        <a href="www.facebook.com" className=" BlueLink"><FontAwesomeIcon icon={fa8} style={{color: "#6febbc",}}/>&nbsp; Meta score</a>
+        
+
 
   </div>
-  <div class="p-2 bd-highlight coreContain1">Third flex item</div>
+  
 </div>
         </div>
 
