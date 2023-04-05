@@ -1,32 +1,22 @@
 import './App.css';
-import Button from 'react-bootstrap/Button';
-import HeaderNavigation from './Components/HeaderNavigation/HeaderNavigation';
-import FooterNavigation from './Components/FooterNavigation/FooterNavigation';
 import Table from './Components/Table/Table';
-import { Route,Routes } from 'react-router-dom';
+import {BrowserRouter as Router, Route,Routes,Navigate} from 'react-router-dom';
 import PageTwo from './Components/PageTwo/PageTwo';
-import HeaderTwo from './Components/HeaderTwo/HeaderTwo';
 
 
 
 function App() {
   return (
-    <div >
-  <HeaderNavigation/>
-  <HeaderTwo/>
-  <br/><br/>
-  {/* <Table/> */}
-  <br/><br/>
-<FooterNavigation/>
+    <div>
+ <Router>
+ <Routes>
 
-{/* <div>Need to route the page  */}
-{/* <Routes>
-      <Route path='*' element={<Navigate to={'/home'}/>} key={'home'}/>
-      <Route path={'/home'} element={<Home/>} key={'home'}/>
-      <Route path={'/home'} element={<Home/>} key={'home'}/>
-</Routes> */}
-{/* </div> */}
-
+ <Route path='*' element={<Navigate to={'/home'}/>} key={'home'}/>
+      <Route path={'/home'} element={<Table/>} key={'home'}/>
+      <Route path={'/one'} element={<PageTwo/>} key={'one'}/>
+     
+</Routes>
+ </Router>
 
     </div>
 

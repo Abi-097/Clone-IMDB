@@ -3,11 +3,16 @@ import Form from 'react-bootstrap/Form';
 import "./Table.css"
 import axios from 'axios';
 import Movies from '../Movies/Movies';
+import HeaderNavigation from '../HeaderNavigation/HeaderNavigation';
+import FooterNavigation from '../FooterNavigation/FooterNavigation'; 
+
 
 export default function Table(){
 
-   return(
 
+   return(
+<div>
+<HeaderNavigation/>
 <div className="app">
     <div class="tableContainer">
       <div class="leftContainer">
@@ -98,6 +103,9 @@ export default function Table(){
       </div>
     </div>
 </div>
+<FooterNavigation/>
+</div>
+
    )
     
 }
