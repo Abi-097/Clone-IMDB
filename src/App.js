@@ -13,7 +13,7 @@ function App() {
 
  <Route path='*' element={<Navigate to={'/home'}/>} key={'home'}/>
       <Route path={'/home'} element={<Table/>} key={'home'}/>
-      <Route path={'/one'} element={<PageTwo/>} key={'one'}/>
+      <Route path={'/1'} element={<PageTwo/>} key={'one'}/>
      
 </Routes>
  </Router>

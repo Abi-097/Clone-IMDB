@@ -1,14 +1,41 @@
-import React from "react";
+// import React from "react";
 import './HeaderTwo.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faSearch,faShareNodes,faStar,faChartLine,faVideo, faImages,fa8,faPlus } from "@fortawesome/free-solid-svg-icons";
 import ReactPlayer from 'react-player';
 import Logo from "../Common/ShareLogo/Logo";
 import Dropdown from 'react-bootstrap/Dropdown';
+import { React,useEffect,useState } from "react";
+import axios from "axios";
 
+
+
+    
 
 
 export default function HeaderTwo(){
+    const [movieA,setMovieA] = useState([]);
+
+     useEffect(()=>{
+      getMovies();
+      
+  },[])
+  const getMovies = () => {
+    axios({
+        method: 'get',
+        url: 'https://imdb-top-100-movies.p.rapidapi.com/top1',
+        headers: {
+          "X-RapidAPI-Key": "c3d40522d4msh48f90e6986a0c8cp15f594jsn646694ad698a"
+        }
+      })
+      .then(function (response) {
+        setMovieA(response.data);
+        console.log(response.data);
+      }).catch(function(error){
+        console.log(error);
+      });
+    }
+
     return(
         <div className="Main">
        <div className="d-flex justify-content-end bd-highlight secMain">
@@ -27,7 +54,7 @@ export default function HeaderTwo(){
 <div className="containerName">
       <div className="leftName">
        <h1>The Shawshank Redemption</h1>
-       <p>1994 . <a href="www.facebook.com" className="WhiteLink" >R</a> . <a href="www.facebook.com" className="WhiteLink" >2h 22m</a></p>
+       <p><a href="www.facebook.com" className="WhiteLink" >{movieA.year}</a> . <a href="www.facebook.com" className="WhiteLink" >R</a> . 2h 22m</p>
        <div>
     </div>
       </div>
@@ -44,7 +71,7 @@ export default function HeaderTwo(){
         <div className="rightDownB">
         <div>
         <div class="d-flex justify-content-between Name">
-    <div><div className="btn btn-dark d-flex ButtonHeader2 "><FontAwesomeIcon icon={faStar} size="xl" style={{color: "#f7fb09",}} />&nbsp;<b>9.3</b>/10</div></div>
+    <div><div className="btn btn-dark d-flex ButtonHeader2 "><FontAwesomeIcon icon={faStar} size="xl" style={{color: "#f7fb09",}} />&nbsp;<b>{movieA.rating}</b>/10</div></div>
     <div><div className="btn btn-dark d-flex ButtonHeader2 Color"><FontAwesomeIcon icon={faStar} size="xl" style={{color: "#5f97f7",}} />&nbsp;<b>Rate</b></div></div>
     <div><div className="btn btn-dark d-flex ButtonHeader2 "><FontAwesomeIcon icon={faChartLine} size="xl" style={{color: "#e11919",}} />&nbsp;<b>9.3</b>/10</div></div>
     </div>
@@ -55,13 +82,13 @@ export default function HeaderTwo(){
 
     <div class="containerYoutube">
   <div class="left-boxYoutube">
-  <img src="https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_QL75_UX380_CR0,1,380,562_.jpg" alt="Girl in a jacket" width="290px" height="450px"/>
+  <img src={movieA.image} alt="Girl in a jacket" width="290px" height="450px"/>
   </div>
   <div class="leftB-boxYoutube">
   <ReactPlayer
    width='750px'
     height='450px'
-  url={"https://www.youtube.com/watch?v=5llXA0RTYIU"}
+url={movieA.trailer}
   config={{
     youtube: {
       playerVars: { showinfo: 1}
@@ -69,6 +96,7 @@ export default function HeaderTwo(){
     facebook: {
         appId: '12345'
     }
+   
   }}
 />
   </div>
@@ -88,9 +116,17 @@ export default function HeaderTwo(){
   <div class="p-2 flex-grow-1 bd-highlight fw-normal">
   Over the course of several years, two convicts form a friendship, seeking consolation and, eventually, <br/>redemption through basic compassion.
   <hr/>
-  Director <a href="www.facebook.com" className="BlueLink"> Frank Darabont </a>
+  Director <a href="www.facebook.com" className="BlueLink">{movieA.director} </a>
   <hr/>
-  Writers <a href="www.facebook.com" className="BlueLink"> Stephen KingFrank </a> .  <a href="www.facebook.com" className="BlueLink"> Darabont </a>
+
+  {/*  */}
+ 
+  {/*{movieA.writers.map((value,index)=>( <span key={index}>{value.split('(')[0]+"."} </span>  */}
+  Writers <a href="www.facebook.com" className="BlueLink"> {movieA.writers?.map((value,index)=>( 
+    <span key={index}>{value.split('(')[0]+"."} </span>
+  ))}
+  </a>
+ 
   <hr/>
   Stars <a href="www.facebook.com" className="BlueLink">Tim Robbins</a> . <a href="www.facebook.com" className="BlueLink">Morgan Freeman</a> .  <a href="www.facebook.com" className="BlueLink">Bob Gunton</a> 
    

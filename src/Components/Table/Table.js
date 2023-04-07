@@ -5,10 +5,32 @@ import axios from 'axios';
 import Movies from '../Movies/Movies';
 import HeaderNavigation from '../HeaderNavigation/HeaderNavigation';
 import FooterNavigation from '../FooterNavigation/FooterNavigation'; 
-
+import { React,useEffect,useState } from "react";
 
 export default function Table(){
 
+  const [movies, setMovies] = useState([]);
+
+  useEffect(()=>{
+      getMovies();
+      
+  },[])
+
+  const getMovies = () => {
+      axios({
+          method: 'get',
+          url: 'https://imdb-top-100-movies.p.rapidapi.com/',
+          headers: {
+            "X-RapidAPI-Key": "c3d40522d4msh48f90e6986a0c8cp15f594jsn646694ad698a"
+          }
+        })
+        .then(function (response) {
+          console.log(response.data);
+          setMovies(response.data);
+        }).catch(function(error){
+          console.log(error);
+        });
+}
 
    return(
 <div>
@@ -42,12 +64,20 @@ export default function Table(){
     </div>
     </div>
     <div className='d-grid'>
-<div> {/*  //need to copy of  */}
-        {/* {movies.map((values)=>(
+ <div> 
+ 
+        <div className="flexTable">
+          <div className="columnA"><img></img></div>
+          <div className="columnB columnX ">Rank & Title</div>
+          <div className="columnC columnX">IMDb Rating</div>
+          <div className="columnD columnX">Your Rating</div>
+          <div className="columnE"></div>
+        </div>
+        {movies.map((values)=>(
             <Movies data={values}/>
-            ))} */}
-            <Movies/>       {/*<--- the output is coming from this one */}  
-</div>  
+            ))} 
+                {/*       <--- the output is coming from this one   */}
+ </div>  
     </div>
 
     </div>
