@@ -3,27 +3,29 @@ import './HeaderTwo.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faSearch,faShareNodes,faStar,faChartLine,faVideo, faImages,fa8,faPlus } from "@fortawesome/free-solid-svg-icons";
 import ReactPlayer from 'react-player';
-import Logo from "../Common/ShareLogo/Logo";
 import Dropdown from 'react-bootstrap/Dropdown';
 import { React,useEffect,useState } from "react";
 import axios from "axios";
-
-
-
+import { useLocation } from 'react-router-dom';
+import HeaderNavigation from '../HeaderNavigation/HeaderNavigation';
+import FooterNavigation from '../FooterNavigation/FooterNavigation';
     
 
 
 export default function HeaderTwo(){
+      
+  const state = useLocation()
     const [movieA,setMovieA] = useState([]);
-
-     useEffect(()=>{
+    
+    useEffect(()=>{
+      console.log(state.state)
       getMovies();
       
   },[])
   const getMovies = () => {
     axios({
         method: 'get',
-        url: 'https://imdb-top-100-movies.p.rapidapi.com/top1',
+        url: 'https://imdb-top-100-movies.p.rapidapi.com/'+state.state,
         headers: {
           "X-RapidAPI-Key": "c3d40522d4msh48f90e6986a0c8cp15f594jsn646694ad698a"
         }
@@ -35,8 +37,8 @@ export default function HeaderTwo(){
         console.log(error);
       });
     }
-
     return(
+      <><HeaderNavigation/> 
         <div className="Main">
        <div className="d-flex justify-content-end bd-highlight secMain">
   <div class="p-2 bd-highlight"><a href="www.facebook.com" className="WhiteLink" >Cast & crew</a></div>
@@ -53,7 +55,7 @@ export default function HeaderTwo(){
 
 <div className="containerName">
       <div className="leftName">
-       <h1>The Shawshank Redemption</h1>
+       <h1>{movieA.title}</h1>
        <p><a href="www.facebook.com" className="WhiteLink" >{movieA.year}</a> . <a href="www.facebook.com" className="WhiteLink" >R</a> . 2h 22m</p>
        <div>
     </div>
@@ -110,11 +112,12 @@ url={movieA.trailer}
     </div>
   </div>
 </div>
-  <div className="btn btn-dark rounded-pill ButtonHeader2 ButtonHeader3"><b>Drama</b></div>
-
+  <div className="btn btn-dark rounded-pill ButtonHeader2 ButtonHeader3"><b>{movieA.genre?.[0]}</b></div>
+  <div className="btn btn-dark rounded-pill ButtonHeader2"><b>{movieA.genre?.[1]}</b></div>
+  <div className="btn btn-dark rounded-pill ButtonHeader2"><b>{movieA.genre?.[2]}</b></div>
   <div class="d-flex bd-highlight coreContain">
   <div class="p-2 flex-grow-1 bd-highlight fw-normal">
-  Over the course of several years, two convicts form a friendship, seeking consolation and, eventually, <br/>redemption through basic compassion.
+  {movieA.description}
   <hr/>
   Director <a href="www.facebook.com" className="BlueLink">{movieA.director} </a>
   <hr/>
@@ -150,6 +153,8 @@ url={movieA.trailer}
   
 </div>
         </div>
+        <FooterNavigation/>
+        </>
 
     )
 }

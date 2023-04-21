@@ -7,6 +7,7 @@ import HeaderNavigation from '../HeaderNavigation/HeaderNavigation';
 import FooterNavigation from '../FooterNavigation/FooterNavigation'; 
 import { React,useEffect,useState } from "react";
 
+
 export default function Table(){
 
   const [movies, setMovies] = useState([]);

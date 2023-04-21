@@ -1,25 +1,19 @@
 import './App.css';
 import Table from './Components/Table/Table';
-import {BrowserRouter as Router, Route,Routes,Navigate} from 'react-router-dom';
-import PageTwo from './Components/PageTwo/PageTwo';
-
+import {Route,Routes,Navigate} from 'react-router-dom';
+import HeaderTwo from './Components/HeaderTwo/HeaderTwo';
 
 
 function App() {
   return (
     <div>
- <Router>
  <Routes>
 
  <Route path='*' element={<Navigate to={'/home'}/>} key={'home'}/>
       <Route path={'/home'} element={<Table/>} key={'home'}/>
-      <Route path={'/1'} element={<PageTwo/>} key={'one'}/>
-     
+      <Route path={"/movies/"} Component={HeaderTwo} key={'header'} /> 
 </Routes>
- </Router>
-
     </div>
-
    );
 }
 

@@ -13,10 +13,15 @@
 .ButtonHeader2{
     background-color: transparent !important;
     border:none !important;
+    /* margin-left: -10% !important; */
 }
 
 .ButtonHeader2:hover{
     background-color: rgb(39, 41, 43) !important;
+}
+
+.ButtonHeader3{
+  margin-left: 7%;
 }
 
 .ButtonHeader4{
@@ -124,10 +129,6 @@
     background-color: rgb(2, 2, 2);
   }
   
-  .ButtonHeader3{
-    margin-left: 7%;
-}
-
 .coreContain{
     margin-left: 7%;
     margin-right: 13%;
