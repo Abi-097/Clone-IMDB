@@ -3,21 +3,23 @@ import './HeaderTwo.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faSearch,faShareNodes,faStar,faChartLine,faVideo, faImages,fa8,faPlus } from "@fortawesome/free-solid-svg-icons";
 import ReactPlayer from 'react-player';
+import Logo from "../Common/ShareLogo/Logo";
 import Dropdown from 'react-bootstrap/Dropdown';
 import { React,useEffect,useState } from "react";
 import axios from "axios";
 import { useLocation } from 'react-router-dom';
 import HeaderNavigation from '../HeaderNavigation/HeaderNavigation';
 import FooterNavigation from '../FooterNavigation/FooterNavigation';
+
+
     
 
 
 export default function HeaderTwo(){
-      
   const state = useLocation()
-    const [movieA,setMovieA] = useState([]);
-    
-    useEffect(()=>{
+  const [movieA,setMovieA] = useState([]);
+
+     useEffect(()=>{
       console.log(state.state)
       getMovies();
       
@@ -37,6 +39,7 @@ export default function HeaderTwo(){
         console.log(error);
       });
     }
+
     return(
       <><HeaderNavigation/> 
         <div className="Main">
@@ -55,7 +58,7 @@ export default function HeaderTwo(){
 
 <div className="containerName">
       <div className="leftName">
-       <h1>{movieA.title}</h1>
+      <h1>{movieA.title}</h1>
        <p><a href="www.facebook.com" className="WhiteLink" >{movieA.year}</a> . <a href="www.facebook.com" className="WhiteLink" >R</a> . 2h 22m</p>
        <div>
     </div>
@@ -112,9 +115,10 @@ url={movieA.trailer}
     </div>
   </div>
 </div>
-  <div className="btn btn-dark rounded-pill ButtonHeader2 ButtonHeader3"><b>{movieA.genre?.[0]}</b></div>
+ <div className="btn btn-dark rounded-pill ButtonHeader2 ButtonHeader3"><b>{movieA.genre?.[0]}</b></div>
   <div className="btn btn-dark rounded-pill ButtonHeader2"><b>{movieA.genre?.[1]}</b></div>
   <div className="btn btn-dark rounded-pill ButtonHeader2"><b>{movieA.genre?.[2]}</b></div>
+
   <div class="d-flex bd-highlight coreContain">
   <div class="p-2 flex-grow-1 bd-highlight fw-normal">
   {movieA.description}
