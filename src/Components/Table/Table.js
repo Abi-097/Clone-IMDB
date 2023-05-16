@@ -53,7 +53,6 @@ export default function Table(){
         <hr/> 
         <div className="headerSelector">
       <div className='showingTitle'><p>Showing 250 Titles</p></div>
-     {/* &nbsp; means spacing */}
       <div> Sort By: &nbsp;  
       <select className='Selector'>
       <option value="variable1">Ranking</option>
@@ -77,7 +76,6 @@ export default function Table(){
         {movies.map((values)=>(
             <Movies data={values}/>
             ))} 
-                {/*       <--- the output is coming from this one   */}
  </div>  
     </div>
 
@@ -91,7 +89,7 @@ export default function Table(){
               <Form.Check 
                 type={type}
                 id={`default-${type}`}
-                label={`Hide title I've seen`}    // cant able to under line but css given 
+                label={`Hide title I've seen`} 
               />
             </div>
           ))}

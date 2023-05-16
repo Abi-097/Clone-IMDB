@@ -9,10 +9,10 @@ function App() {
     <div>
  <Routes>
 
- <Route path='*' element={<Navigate to={'/home'}/>} key={'home'}/>
-      <Route path={'/home'} element={<Table/>} key={'home'}/>
-      <Route path={"/movies/"} Component={HeaderTwo} key={'header'} /> 
-</Routes>
+          <Route path='*' element={<Navigate to={'/home'}/>} key={'home'}/>
+                <Route path={'/home'} element={<Table/>} key={'home'}/>
+                <Route path={"/movies/"} Component={HeaderTwo} key={'header'} /> 
+          </Routes>
     </div>
    );
 }

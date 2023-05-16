@@ -5,7 +5,6 @@ import {Dropdown} from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faImdb} from "@fortawesome/free-brands-svg-icons";
 import {faBars,faBookmark} from "@fortawesome/free-solid-svg-icons";
-// import {faRectangleHistoryCirclePlus} from "react-fontawesome";
 
 
 import './HeaderNavigation.css'
@@ -48,9 +47,6 @@ function HeaderNavigation() {
             </Dropdown.Menu>
           </Dropdown>
                </div> 
-                  {/* <Nav.Link href="#home">Home</Nav.Link> */}
-                  {/* <Nav.Link href="#features">Features</Nav.Link>
-                  <Nav.Link href="#pricing">Pricing</Nav.Link> */}
                 </Nav>
               </Container>
             </Navbar>

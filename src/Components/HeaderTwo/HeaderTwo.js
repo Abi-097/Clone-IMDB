@@ -3,7 +3,6 @@ import './HeaderTwo.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faSearch,faShareNodes,faStar,faChartLine,faVideo, faImages,fa8,faPlus } from "@fortawesome/free-solid-svg-icons";
 import ReactPlayer from 'react-player';
-import Logo from "../Common/ShareLogo/Logo";
 import Dropdown from 'react-bootstrap/Dropdown';
 import { React,useEffect,useState } from "react";
 import axios from "axios";
@@ -20,7 +19,6 @@ export default function HeaderTwo(){
   const [movieA,setMovieA] = useState([]);
 
      useEffect(()=>{
-      console.log(state.state)
       getMovies();
       
   },[])
@@ -125,10 +123,7 @@ url={movieA.trailer}
   <hr/>
   Director <a href="www.facebook.com" className="BlueLink">{movieA.director} </a>
   <hr/>
-
-  {/*  */}
  
-  {/*{movieA.writers.map((value,index)=>( <span key={index}>{value.split('(')[0]+"."} </span>  */}
   Writers <a href="www.facebook.com" className="BlueLink"> {movieA.writers?.map((value,index)=>( 
     <span key={index}>{value.split('(')[0]+"."} </span>
   ))}
@@ -151,10 +146,7 @@ url={movieA.trailer}
         </div>
         <a href="www.facebook.com" className=" BlueLink"><FontAwesomeIcon icon={fa8} style={{color: "#6febbc",}}/>&nbsp; Meta score</a>
         
-
-
   </div>
-  
 </div>
         </div>
         <FooterNavigation/>

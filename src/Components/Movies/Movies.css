@@ -5,29 +5,24 @@
   .columnA {
     flex: 2;
     flex-basis: 20%;
-    /* background-color: #ffcc00; */
   }
 
 
   .columnF {
     flex: 1;
     flex-basis: 10%;
-    /* background-color: #94e49f; */
   }
   
   .columnB {
     flex: 3;
     flex-basis: 70%;
-    /* background-color: #33ccff; */
     margin-top: auto !important;
     margin-bottom: auto !important;
-    /* text-align: center; */
   }
   
   .columnC {
     flex: 2;
     flex-basis: 10%;
-    /* background-color: #66ff66; */
     margin-top: auto !important;
     margin-bottom: auto !important;
     text-align: center;
@@ -36,7 +31,6 @@
   .columnD {
     flex: 2;
     flex-basis: 10%;
-    /* background-color: rgb(175, 109, 109) !important; */
     margin-top: auto !important;
     margin-bottom: auto !important;
     text-align: center;
@@ -45,13 +39,10 @@
   .columnE {
     flex: 1;
     flex-basis: 10%;
-    /* background-color: #9966ff; */
     margin-top: auto !important;
     margin-bottom: auto !important;
     margin-left: 15px !important;
     text-align: center;
-    /* align-items: center !important;
-  justify-content: center !important; */
   }
   
 
