@@ -1,113 +1,95 @@
-
-/* table content */
-
 .tableContainer {
-    width: 100%;
-    overflow: hidden;
-  }
+  width: 100%;
+  overflow: hidden;
+}
 
-  
 .leftContainer {
-    width: 50%;
-    height: 100%;
-    float: left;
-    /* border: 1px solid black; */
-    margin-left:10%
-  }
+  width: 50%;
+  height: 100%;
+  float: left;
+  margin-left: 10%
+}
 
-  
+
 .flex-container {
-    display: flex;
-    justify-content: space-between;
-  }
+  display: flex;
+  justify-content: space-between;
+}
 
-.wording{
-    margin-left: 15px;
-    }
-    
-.wordingA{
-    margin-top: 20px;
-    font-weight: 500;
-    }
-    
-.wordingC{
-    font-size: small;
-    font-weight: 400;
-    }
+.wording {
+  margin-left: 15px;
+}
 
-    .Logo{
-        margin-right: 10px;
-      }
-      
+.wordingA {
+  margin-top: 20px;
+  font-weight: 500;
+}
 
-    .headerSelector {
-        display: flex;
-        /* align-items: center; */
-        justify-content: space-between;
-      }
+.wordingC {
+  font-size: small;
+  font-weight: 400;
+}
+
+.Logo {
+  margin-right: 10px;
+}
 
 
-      .showingTitle{
-        margin-left: 15px;
-      }
-
-      .Selector{
-        margin-right:15px;
-        width: 200px;
-        
-      }
-
-      .rightContainer {
-        width: 30%;
-        height: 100%;
-        float: left;
-        /* border: 1px solid black; */
-        /* margin-right:10%; */
-        line-height: 1;
-        /* margin-left:10%; */
-      }
-
-      .rightFirst{
-        margin-top: 55px;
-        margin-left:30px;
-        font-size: 20px;
-      }
-      
-      .rightFirstA{
-        /* margin-top: 55px; */
-        margin-left:30px;
-        font-size: 20px;
-      }
-
-      .firstOther{
-        margin-left:30px !important;
-        margin-right: 30px !important;
-        
-      }
-      
-      .firstOther:hover{
-        text-decoration: underline !important;
-      }
-
-      .rightPara{
-        list-style-type: none; 
-        margin-right: 30px;
-       
-      }
-      .li{
-        padding-bottom: 7px !important;
-        text-decoration: none;
-        color: blue;
-      }
+.headerSelector {
+  display: flex;
+  justify-content: space-between;
+}
 
 
+.showingTitle {
+  margin-left: 15px;
+}
 
-      .li:hover{
-        text-decoration: underline;
-        color: blue;
-        cursor: pointer;
-    }
-    
-    
-    
-    
+.Selector {
+  margin-right: 15px;
+  width: 200px;
+}
+
+.rightContainer {
+  width: 30%;
+  height: 100%;
+  float: left;
+  line-height: 1;
+}
+
+.rightFirst {
+  margin-top: 55px;
+  margin-left: 30px;
+  font-size: 20px;
+}
+
+.rightFirstA {
+  margin-left: 30px;
+  font-size: 20px;
+}
+
+.firstOther {
+  margin-left: 30px !important;
+  margin-right: 30px !important;
+}
+
+.firstOther:hover {
+  text-decoration: underline !important;
+}
+
+.rightPara {
+  list-style-type: none;
+  margin-right: 30px;
+}
+
+.li {
+  padding-bottom: 7px !important;
+  text-decoration: none;
+  color: blue;
+}
+
+.li:hover {
+  text-decoration: underline;
+  color: blue;
+  cursor: pointer;
+}

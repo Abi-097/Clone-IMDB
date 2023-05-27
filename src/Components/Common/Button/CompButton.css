@@ -1,14 +1,11 @@
-.TestingButton{
-    background-color: black;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    border:none;
+.TestingButton {
+  background-color: black;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
 }
 
-
 .TestingButton:hover {
-    background-color: rgb(74, 74, 74) !important;
-  }
-
-   
+  background-color: rgb(74, 74, 74) !important;
+}
